@@ -1,0 +1,185 @@
+/* ========================================
+   AOE4 Food Gathering Tables - Shared Styles
+   ======================================== */
+
+/* === RESET & BASE === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* === TYPOGRAPHY === */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+ul {
+    line-height: 1.8;
+    margin-left: 20px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/* === CIVILIZATION-SPECIFIC COLORS === */
+.civ-japanese h1,
+.civ-japanese h3,
+.civ-japanese th,
+.civ-japanese td:first-child,
+.civ-japanese .notes strong {
+    color: #ffcc00;
+}
+
+.civ-japanese .notes {
+    border-left-color: #ffcc00;
+}
+
+.civ-ottoman h1,
+.civ-ottoman h3,
+.civ-ottoman th,
+.civ-ottoman td:first-child,
+.civ-ottoman .notes strong {
+    color: #d4af37;
+}
+
+.civ-ottoman .notes {
+    border-left-color: #d4af37;
+}
+
+.civ-malian h1,
+.civ-malian h3,
+.civ-malian th,
+.civ-malian td:first-child,
+.civ-malian .notes strong {
+    color: #cd7f32;
+}
+
+.civ-malian .notes {
+    border-left-color: #cd7f32;
+}
+
+/* === LAYOUT CONTAINERS === */
+.table-container {
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+.notes {
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #2c2c2c;
+    border-radius: 8px;
+    border-left: 4px solid;
+}
+
+.notes h3 {
+    margin-top: 0;
+}
+
+/* === TABLE STRUCTURE === */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #444;
+    font-size: 14px;
+}
+
+th {
+    background-color: #2c2c2c;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+td:first-child {
+    background-color: #2c2c2c;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* === TABLE CELL TYPES === */
+.cell-empty {
+    text-align: center;
+}
+
+.cell-warning {
+    text-align: center;
+}
+
+.cell-value {
+    font-weight: bold;
+    color: #000000;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    body {
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .notes {
+        padding: 15px;
+        margin: 20px 10px;
+    }
+
+    ul {
+        margin-left: 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2em;
+    }
+
+    th, td {
+        padding: 6px;
+        font-size: 11px;
+    }
+
+    .notes {
+        padding: 10px;
+    }
+}
