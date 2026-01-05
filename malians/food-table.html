@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recolección de Alimentos - Malienses AOE4</title>
+    <link rel="stylesheet" href="aoe4_tables_styles.css">
+</head>
+<body class="civ-malian">
+    <h1>📊 Recolección de Alimentos - Malienses AOE4</h1>
+    
+    <div class="table-container">
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Fuente de Alimento</th>
+                    <th>Base</th>
+                    <th>Survival Techniques<br>/ Drift Nets</th>
+                    <th>Horticulture</th>
+                    <th>Fertilization</th>
+                    <th>Precision<br>Cross-Breeding</th>
+                    <th>Griot Bara<br>Festival (+50%)</th>
+                    <th>+ Grand Fulani<br>Corral</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ovejas</td>
+                    <td>45</td>
+                    <td colspan="6" class="cell-empty">—</td>
+                </tr>
+                <tr>
+                    <td>Venado</td>
+                    <td>49.6</td>
+                    <td>57</td>
+                    <td colspan="5" class="cell-empty">—</td>
+                </tr>
+                <tr>
+                    <td>Jabalí</td>
+                    <td colspan="7" class="cell-warning">⚠️ No se puede recolectar (civ islámica)</td>
+                </tr>
+                <tr>
+                    <td>Bayas</td>
+                    <td>41.4</td>
+                    <td>—</td>
+                    <td>47.6</td>
+                    <td>54.7</td>
+                    <td>62.9</td>
+                    <td>94.4</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>Ganado (cosechado)</td>
+                    <td>48.6</td>
+                    <td colspan="4" class="cell-empty">—</td>
+                    <td>72.9</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>Ganado (Ranch, por vaca)</td>
+                    <td>25</td>
+                    <td>—</td>
+                    <td>28.8</td>
+                    <td>33.1</td>
+                    <td>38.1</td>
+                    <td>57.2</td>
+                    <td>+20</td>
+                </tr>
+                <tr>
+                    <td>Granjas</td>
+                    <td>37.5</td>
+                    <td>—</td>
+                    <td>43.1</td>
+                    <td>49.6</td>
+                    <td>57</td>
+                    <td>85.5</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>Peces Costeros (barco)</td>
+                    <td>40.5</td>
+                    <td>46.6</td>
+                    <td colspan="5" class="cell-empty">—</td>
+                </tr>
+                <tr>
+                    <td>Peces Profundos (barco)</td>
+                    <td>48</td>
+                    <td>55.2</td>
+                    <td colspan="5" class="cell-empty">—</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="notes">
+        <h3>📋 Notas sobre las Tecnologías:</h3>
+        <ul>
+            <li><strong>Survival Techniques</strong> (Era I): +15% recolección solo de <strong>caza</strong> (venado), NO afecta ovejas ni peces</li>
+            <li><strong>Horticulture</strong> (Era II): +15% recolección de granjas y bayas (tecnología estándar)</li>
+            <li><strong>Fertilization</strong> (Era III): +15% recolección de granjas y bayas (acumulativo, tecnología estándar)</li>
+            <li><strong>Precision Cross-Breeding</strong> (Era IV): +15% recolección de granjas y bayas (acumulativo, tecnología estándar)</li>
+            <li><strong>Griot Bara Festival</strong> (Landmark Era III): +50% recolección de <strong>todas las fuentes de comida</strong> durante 90 segundos (cuesta 300 oro)</li>
+        </ul>
+        
+        <h3>🐄 Sistema de Ganado (Cattle):</h3>
+        <ul>
+            <li><strong>Ganado</strong>: Se produce en Mills por 90 oro (límite 20 vacas)</li>
+            <li><strong>Opción 1 - Cosechar</strong>: 500 comida a 0.81 f/s = <strong>48.6 f/min</strong></li>
+            <li><strong>Opción 2 - Cattle Ranch</strong>: Genera comida pasivamente sin trabajar</li>
+            <li>Cada vaca en un Ranch genera <strong>25 f/min</strong> base (máximo 3 vacas por Ranch)</li>
+            <li><strong>Se beneficia de Horticulture/Fertilization/Precision Cross-Breeding</strong> (×1.15³ = 38.1 f/min por vaca)</li>
+            <li>Con Griot Bara Festival: ×1.5 adicional (57.2 f/min por vaca con todas las mejoras)</li>
+            <li><strong>Ejemplo con 3 vacas</strong>: 38.1 × 3 = 114.3 f/min (todas las mejoras)</li>
+        </ul>
+
+        <h3>🏛️ Grand Fulani Corral (Landmark Era III):</h3>
+        <ul>
+            <li><strong>Generación pasiva adicional</strong>: +20 f/min por cada vaca dentro de un radio de 6.5 casillas</li>
+            <li>Este bono es <strong>independiente</strong> del Cattle Ranch - se suma directamente</li>
+            <li><strong>NO se ve afectado</strong> por Horticulture/Fertilization/Precision Cross-Breeding ni por Festival</li>
+            <li><strong>Ejemplo</strong>: 1 vaca con todas las mejoras (38.1) + Corral (20) = <strong>58.1 f/min por vaca</strong></li>
+            <li><strong>Con 3 vacas</strong>: 114.3 (ranch) + 60 (corral) = <strong>174.3 f/min total permanente</strong></li>
+        </ul>
+
+        <h3>🎭 Landmark - Griot Bara (Era III):</h3>
+        <ul>
+            <li>Permite activar <strong>festivales</strong> que cuestan 300 oro y duran 90 segundos</li>
+            <li><strong>Food Festival</strong>: +50% velocidad de recolección de comida</li>
+            <li>Otros festivales: Military (+50% velocidad producción) y Siege (+100% daño)</li>
+            <li>Solo un festival puede estar activo a la vez</li>
+        </ul>
+        
+        <h3>🎣 Pesca:</h3>
+        <ul>
+            <li><strong>Drift Nets</strong> (Era III, Muelle): +15% recolección de pesca, +20 capacidad, +10% velocidad</li>
+            <li>Los valores de pesca son para <strong>barcos pesqueros</strong> (0.675 f/s costeros, 0.8 f/s profundos)</li>
+            <li>Los aldeanos recogen más rápido de peces costeros (1.0 f/s) pero no se benefician de Drift Nets</li>
+        </ul>
+
+        <h3>⚠️ Restricción Importante:</h3>
+        <ul>
+            <li>Los Malienses son una <strong>civilización islámica</strong></li>
+            <li><strong>NO pueden recolectar jabalíes</strong> (Wild Boar)</li>
+            <li>Pueden recolectar venado y ovejas normalmente</li>
+        </ul>
+
+        <h3>📈 Valores Máximos (por vaca/aldeano):</h3>
+        <ul>
+            <li><strong>Ganado Ranch con todas las mejoras + Festival: 57.2 f/min</strong> (¡pasivo, sin aldeano!)</li>
+            <li><strong>Grand Fulani Corral: +20 f/min por vaca</strong> (adicional, no se ve afectado por mejoras)</li>
+            <li><strong>Ejemplo: 3 vacas Ranch + mejoras + Festival + Corral: 171.6 + 60 = 231.6 f/min</strong> (¡sin aldeanos!)</li>
+            <li><strong>Bayas con todas las mejoras + Festival: 94.4 f/min</strong></li>
+            <li><strong>Granjas con todas las mejoras + Festival: 85.5 f/min</strong></li>
+        </ul>
+        
+        <p><strong>Estrategia:</strong> Los Malienses tienen una economía única basada en oro. Inviertes oro en ganado que genera comida pasivamente en los Cattle Ranches. El Grand Fulani Corral añade +20 f/min por vaca (no afectado por mejoras). El Griot Bara Festival proporciona un boost temporal masivo (+50%) a toda la generación de comida durante 90 segundos.</p>
+    </div>
+
+    <script>
+        function getColor(value, min, max) {
+            const normalized = (value - min) / (max - min);
+            
+            let r, g, b;
+            
+            if (normalized < 0.5) {
+                r = 255;
+                g = Math.round(normalized * 2 * 255);
+                b = 0;
+            } else {
+                r = Math.round((1 - (normalized - 0.5) * 2) * 255);
+                g = 255;
+                b = 0;
+            }
+            
+            return `rgb(${r}, ${g}, ${b})`;
+        }
+
+        const table = document.getElementById('dataTable');
+        const rows = table.querySelectorAll('tbody tr');
+        
+        let allValues = [];
+        rows.forEach(row => {
+            const cells = row.querySelectorAll('td:not(:first-child)');
+            cells.forEach(cell => {
+                const value = parseFloat(cell.textContent);
+                if (!isNaN(value)) {
+                    allValues.push(value);
+                }
+            });
+        });
+        
+        const minValue = Math.min(...allValues);
+        const maxValue = Math.max(...allValues);
+        
+        rows.forEach(row => {
+            const cells = row.querySelectorAll('td:not(:first-child)');
+            cells.forEach(cell => {
+                const value = parseFloat(cell.textContent);
+                if (!isNaN(value)) {
+                    const bgColor = getColor(value, minValue, maxValue);
+                    cell.style.backgroundColor = bgColor;
+                    cell.classList.add('cell-value');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
