@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recolección de Alimentos - Otomanos AOE4</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+        h1 {
+            text-align: center;
+            color: #d4af37;
+            margin-bottom: 30px;
+        }
+        .table-container {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #444;
+            font-size: 14px;
+        }
+        th {
+            background-color: #2c2c2c;
+            font-weight: bold;
+            color: #d4af37;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        td:first-child {
+            background-color: #2c2c2c;
+            font-weight: bold;
+            text-align: left;
+            color: #d4af37;
+        }
+        .notes {
+            max-width: 1400px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #2c2c2c;
+            border-radius: 8px;
+            border-left: 4px solid #d4af37;
+        }
+        .notes h3 {
+            color: #d4af37;
+            margin-top: 0;
+        }
+        .notes ul {
+            line-height: 1.8;
+        }
+        .notes strong {
+            color: #d4af37;
+        }
+    </style>
+</head>
+<body>
+    <h1>📊 Recolección de Alimentos - Otomanos AOE4</h1>
+    
+    <div class="table-container">
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Fuente de Alimento</th>
+                    <th>Base</th>
+                    <th>Survival<br>Techniques</th>
+                    <th>Horticulture</th>
+                    <th>Fertilization</th>
+                    <th>Precision<br>Cross-Breeding</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ovejas</td>
+                    <td>45</td>
+                    <td colspan="4" style="text-align: center;">—</td>
+                </tr>
+                <tr>
+                    <td>Venado</td>
+                    <td>49.6</td>
+                    <td>57</td>
+                    <td colspan="3" style="text-align: center;">—</td>
+                </tr>
+                <tr>
+                    <td>Jabalí</td>
+                    <td colspan="5" style="text-align: center;">⚠️ No se puede recolectar (civ islámica)</td>
+                </tr>
+                <tr>
+                    <td>Bayas (normales)</td>
+                    <td>41.4</td>
+                    <td>—</td>
+                    <td>47.6</td>
+                    <td>54.7</td>
+                    <td>62.9</td>
+                </tr>
+                <tr>
+                    <td>Bayas (Twin Minaret)</td>
+                    <td>62.1</td>
+                    <td>—</td>
+                    <td>71.4</td>
+                    <td>82.1</td>
+                    <td>94.4</td>
+                </tr>
+                <tr>
+                    <td>Granjas</td>
+                    <td>37.5</td>
+                    <td>—</td>
+                    <td>43.1</td>
+                    <td>49.6</td>
+                    <td>57</td>
+                </tr>
+                <tr>
+                    <td>Peces Costeros</td>
+                    <td>60</td>
+                    <td colspan="4" style="text-align: center;">—</td>
+                </tr>
+                <tr>
+                    <td>Peces Profundos</td>
+                    <td>66</td>
+                    <td colspan="4" style="text-align: center;">—</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="notes">
+        <h3>📋 Notas sobre las Tecnologías:</h3>
+        <ul>
+            <li><strong>Survival Techniques</strong> (Era I): +15% recolección solo de <strong>caza</strong> (venado), NO afecta ovejas ni peces</li>
+            <li><strong>Horticulture</strong> (Era II): +15% recolección de granjas y bayas</li>
+            <li><strong>Fertilization</strong> (Era III): +15% recolección de granjas y bayas (acumulativo)</li>
+            <li><strong>Precision Cross-Breeding</strong> (Era IV): +15% recolección de granjas y bayas (acumulativo)</li>
+        </ul>
+        
+        <h3>🕌 Landmark Único:</h3>
+        <ul>
+            <li><strong>Twin Minaret Medrese</strong> (Era I): Genera 4 arbustos de bayas que se regeneran cada 120 segundos</li>
+            <li>Los aldeanos recogen <strong>+50% más rápido</strong> de estas bayas especiales (62.1 f/min base)</li>
+            <li>Estas bayas especiales también se benefician de Horticulture, Fertilization y Precision Cross-Breeding</li>
+        </ul>
+        
+        <h3>⚠️ Restricción Importante:</h3>
+        <ul>
+            <li>Los Otomanos son una <strong>civilización islámica</strong></li>
+            <li><strong>NO pueden recolectar jabalíes</strong> (Wild Boar)</li>
+            <li>Pueden recolectar venado y ovejas normalmente</li>
+        </ul>
+
+        <h3>📈 Valores Máximos:</h3>
+        <ul>
+            <li><strong>Bayas del Twin Minaret con todas las mejoras: 94.4 f/min</strong> (¡la mejor fuente renovable!)</li>
+            <li><strong>Peces profundos: 66 f/min</strong></li>
+            <li><strong>Peces costeros: 60 f/min</strong></li>
+            <li><strong>Venado con Survival Techniques: 57 f/min</strong></li>
+            <li><strong>Granjas con todas las mejoras: 57 f/min</strong></li>
+        </ul>
+        
+        <p><strong>Estrategia:</strong> El Twin Minaret Medrese es extremadamente fuerte para la economía otomana, proporcionando la mejor tasa de recolección renovable del juego (94.4 f/min). Las bayas se regeneran automáticamente, creando una fuente de comida sostenible superior a las granjas.</p>
+    </div>
+
+    <script>
+        // Función para interpolar color entre rojo y verde
+        function getColor(value, min, max) {
+            const normalized = (value - min) / (max - min);
+            
+            let r, g, b;
+            
+            if (normalized < 0.5) {
+                r = 255;
+                g = Math.round(normalized * 2 * 255);
+                b = 0;
+            } else {
+                r = Math.round((1 - (normalized - 0.5) * 2) * 255);
+                g = 255;
+                b = 0;
+            }
+            
+            return `rgb(${r}, ${g}, ${b})`;
+        }
+
+        const table = document.getElementById('dataTable');
+        const rows = table.querySelectorAll('tbody tr');
+        
+        let allValues = [];
+        rows.forEach(row => {
+            const cells = row.querySelectorAll('td:not(:first-child)');
+            cells.forEach(cell => {
+                const value = parseFloat(cell.textContent);
+                if (!isNaN(value)) {
+                    allValues.push(value);
+                }
+            });
+        });
+        
+        const minValue = Math.min(...allValues);
+        const maxValue = Math.max(...allValues);
+        
+        rows.forEach(row => {
+            const cells = row.querySelectorAll('td:not(:first-child)');
+            cells.forEach(cell => {
+                const value = parseFloat(cell.textContent);
+                if (!isNaN(value)) {
+                    const bgColor = getColor(value, minValue, maxValue);
+                    cell.style.backgroundColor = bgColor;
+                    cell.style.color = '#000000';
+                    cell.style.fontWeight = 'bold';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
