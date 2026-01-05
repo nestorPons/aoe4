@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recolección de Alimentos - Japoneses AOE4</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+        h1 {
+            text-align: center;
+            color: #ffcc00;
+            margin-bottom: 30px;
+        }
+        .table-container {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #444;
+            font-size: 14px;
+        }
+        th {
+            background-color: #2c2c2c;
+            font-weight: bold;
+            color: #ffcc00;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        td:first-child {
+            background-color: #2c2c2c;
+            font-weight: bold;
+            text-align: left;
+            color: #ffcc00;
+        }
+        .notes {
+            max-width: 1400px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #2c2c2c;
+            border-radius: 8px;
+            border-left: 4px solid #ffcc00;
+        }
+        .notes h3 {
+            color: #ffcc00;
+            margin-top: 0;
+        }
+        .notes ul {
+            line-height: 1.8;
+        }
+        .notes strong {
+            color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+    <h1>📊 Recolección de Alimentos - Japoneses AOE4</h1>
+    
+    <div class="table-container">
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Fuente de Alimento</th>
+                    <th>Base</th>
+                    <th>Técnicas de<br>Supervivencia</th>
+                    <th>+ Tawara</th>
+                    <th>+ Takezaiku</th>
+                    <th>+ Fudasashi</th>
+                    <th>Daimyo<br>Manor</th>
+                    <th>Daimyo<br>Palace</th>
+                    <th>Shogunate<br>Castle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ovejas</td>
+                    <td>45</td>
+                    <td colspan="7" style="text-align: center;">—</td>
+                </tr>
+                <tr>
+                    <td>Venado</td>
+                    <td>49.6</td>
+                    <td>57</td>
+                    <td colspan="6" style="text-align: center;">—</td>
+                </tr>
+                <tr>
+                    <td>Jabalí</td>
+                    <td>49.6</td>
+                    <td>57</td>
+                    <td colspan="6" style="text-align: center;">—</td>
+                </tr>
+                <tr>
+                    <td>Bayas</td>
+                    <td>41.4</td>
+                    <td>—</td>
+                    <td>51.8</td>
+                    <td>64.7</td>
+                    <td>80.9</td>
+                    <td colspan="3" style="text-align: center;">—</td>
+                </tr>
+                <tr>
+                    <td>Granjas</td>
+                    <td>37.5</td>
+                    <td colspan="4" style="text-align: center;">—</td>
+                    <td>45</td>
+                    <td>52.5</td>
+                    <td>60</td>
+                </tr>
+                <tr>
+                    <td>Peces Costeros</td>
+                    <td>60</td>
+                    <td colspan="7" style="text-align: center;">—</td>
+                </tr>
+                <tr>
+                    <td>Peces Profundos</td>
+                    <td>66</td>
+                    <td colspan="7" style="text-align: center;">—</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="notes">
+        <h3>📋 Notas sobre las Tecnologías:</h3>
+        <ul>
+            <li><strong>Técnicas de Supervivencia</strong> (Era I): +15% recolección solo de <strong>caza</strong> (venado y jabalí), NO afecta ovejas ni peces</li>
+            <li><strong>Tawara</strong> (Era II): +25% recolección de <strong>bayas</strong> (acumulativo)</li>
+            <li><strong>Takezaiku</strong> (Era III): +25% recolección de <strong>bayas</strong> (acumulativo)</li>
+            <li><strong>Fudasashi</strong> (Era IV): +25% recolección de <strong>bayas</strong> (acumulativo)</li>
+        </ul>
+        
+        <h3>🏯 Puntos de Referencia (solo afectan Granjas):</h3>
+        <ul>
+            <li><strong>Daimyo Manor</strong> (Era II): +20% recolección de granjas en radio de 10 casillas</li>
+            <li><strong>Daimyo Palace</strong> (Era III): +40% recolección de granjas (total acumulado)</li>
+            <li><strong>Shogunate Castle</strong> (Era IV): +60% recolección de granjas (total acumulado)</li>
+        </ul>
+        
+        <p><strong>Nota importante:</strong></p>
+        <ul>
+            <li><strong>Técnicas de Supervivencia</strong> solo afecta a <strong>caza</strong> (venado y jabalí) con +15%</li>
+            <li><strong>Tawara, Takezaiku, Fudasashi</strong> solo afectan <strong>bayas</strong>, cada uno da +25% acumulativo</li>
+            <li>Los bonos del sistema <strong>Daimyo</strong> (Manor +20%, Palace +40%, Castle +60%) <strong>solo aplican a granjas</strong></li>
+            <li><strong>Ovejas y peces</strong> NO reciben ningún bono de tecnologías de comida de los japoneses</li>
+        </ul>
+    </div>
+
+    <script>
+        // Función para interpolar color entre rojo y verde
+        function getColor(value, min, max) {
+            // Normalizar el valor entre 0 y 1
+            const normalized = (value - min) / (max - min);
+            
+            // Interpolación de rojo a verde pasando por amarillo
+            let r, g, b;
+            
+            if (normalized < 0.5) {
+                // De rojo a amarillo
+                r = 255;
+                g = Math.round(normalized * 2 * 255);
+                b = 0;
+            } else {
+                // De amarillo a verde
+                r = Math.round((1 - (normalized - 0.5) * 2) * 255);
+                g = 255;
+                b = 0;
+            }
+            
+            return `rgb(${r}, ${g}, ${b})`;
+        }
+
+        // Obtener todas las celdas con valores numéricos
+        const table = document.getElementById('dataTable');
+        const rows = table.querySelectorAll('tbody tr');
+        
+        // Recopilar todos los valores para encontrar min y max
+        let allValues = [];
+        rows.forEach(row => {
+            const cells = row.querySelectorAll('td:not(:first-child)');
+            cells.forEach(cell => {
+                const value = parseFloat(cell.textContent);
+                if (!isNaN(value)) {
+                    allValues.push(value);
+                }
+            });
+        });
+        
+        const minValue = Math.min(...allValues);
+        const maxValue = Math.max(...allValues);
+        
+        // Aplicar colores a cada celda
+        rows.forEach(row => {
+            const cells = row.querySelectorAll('td:not(:first-child)');
+            cells.forEach(cell => {
+                const value = parseFloat(cell.textContent);
+                if (!isNaN(value)) {
+                    const bgColor = getColor(value, minValue, maxValue);
+                    cell.style.backgroundColor = bgColor;
+                    
+                    // Texto siempre en negro para mejor legibilidad
+                    cell.style.color = '#000000';
+                    cell.style.fontWeight = 'bold';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
