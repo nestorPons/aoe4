@@ -4,70 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recolección de Alimentos - Otomanos AOE4</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #1a1a1a;
-            color: #ffffff;
-        }
-        h1 {
-            text-align: center;
-            color: #d4af37;
-            margin-bottom: 30px;
-        }
-        .table-container {
-            overflow-x: auto;
-            margin: 20px 0;
-        }
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            max-width: 1400px;
-            margin: 0 auto;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-        }
-        th, td {
-            padding: 12px;
-            text-align: center;
-            border: 1px solid #444;
-            font-size: 14px;
-        }
-        th {
-            background-color: #2c2c2c;
-            font-weight: bold;
-            color: #d4af37;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-        td:first-child {
-            background-color: #2c2c2c;
-            font-weight: bold;
-            text-align: left;
-            color: #d4af37;
-        }
-        .notes {
-            max-width: 1400px;
-            margin: 30px auto;
-            padding: 20px;
-            background-color: #2c2c2c;
-            border-radius: 8px;
-            border-left: 4px solid #d4af37;
-        }
-        .notes h3 {
-            color: #d4af37;
-            margin-top: 0;
-        }
-        .notes ul {
-            line-height: 1.8;
-        }
-        .notes strong {
-            color: #d4af37;
-        }
-    </style>
+    <link rel="stylesheet" href="aoe4_tables_styles.css">
 </head>
-<body>
+<body class="civ-ottoman">
     <h1>📊 Recolección de Alimentos - Otomanos AOE4</h1>
     
     <div class="table-container">
@@ -76,7 +15,7 @@
                 <tr>
                     <th>Fuente de Alimento</th>
                     <th>Base</th>
-                    <th>Survival<br>Techniques</th>
+                    <th>Survival Techniques<br>/ Drift Nets</th>
                     <th>Horticulture</th>
                     <th>Fertilization</th>
                     <th>Precision<br>Cross-Breeding</th>
@@ -86,17 +25,17 @@
                 <tr>
                     <td>Ovejas</td>
                     <td>45</td>
-                    <td colspan="4" style="text-align: center;">—</td>
+                    <td colspan="4" class="cell-empty">—</td>
                 </tr>
                 <tr>
                     <td>Venado</td>
                     <td>49.6</td>
                     <td>57</td>
-                    <td colspan="3" style="text-align: center;">—</td>
+                    <td colspan="3" class="cell-empty">—</td>
                 </tr>
                 <tr>
                     <td>Jabalí</td>
-                    <td colspan="5" style="text-align: center;">⚠️ No se puede recolectar (civ islámica)</td>
+                    <td colspan="5" class="cell-warning">⚠️ No se puede recolectar (civ islámica)</td>
                 </tr>
                 <tr>
                     <td>Bayas (normales)</td>
@@ -123,14 +62,16 @@
                     <td>57</td>
                 </tr>
                 <tr>
-                    <td>Peces Costeros</td>
-                    <td>60</td>
-                    <td colspan="4" style="text-align: center;">—</td>
+                    <td>Peces Costeros (barco)</td>
+                    <td>40.5</td>
+                    <td>46.6</td>
+                    <td colspan="3" class="cell-empty">—</td>
                 </tr>
                 <tr>
-                    <td>Peces Profundos</td>
-                    <td>66</td>
-                    <td colspan="4" style="text-align: center;">—</td>
+                    <td>Peces Profundos (barco)</td>
+                    <td>48</td>
+                    <td>55.2</td>
+                    <td colspan="3" class="cell-empty">—</td>
                 </tr>
             </tbody>
         </table>
@@ -157,6 +98,13 @@
             <li>Los Otomanos son una <strong>civilización islámica</strong></li>
             <li><strong>NO pueden recolectar jabalíes</strong> (Wild Boar)</li>
             <li>Pueden recolectar venado y ovejas normalmente</li>
+        </ul>
+
+        <h3>🎣 Pesca:</h3>
+        <ul>
+            <li><strong>Drift Nets</strong> (Era III, Muelle): +15% recolección de pesca, +20 capacidad, +10% velocidad</li>
+            <li>Los valores de pesca son para <strong>barcos pesqueros</strong> (0.675 f/s costeros, 0.8 f/s profundos)</li>
+            <li>Los aldeanos recogen más rápido de peces costeros (1.0 f/s) pero no se benefician de Drift Nets</li>
         </ul>
 
         <h3>📈 Valores Máximos:</h3>
@@ -215,8 +163,7 @@
                 if (!isNaN(value)) {
                     const bgColor = getColor(value, minValue, maxValue);
                     cell.style.backgroundColor = bgColor;
-                    cell.style.color = '#000000';
-                    cell.style.fontWeight = 'bold';
+                    cell.classList.add('cell-value');
                 }
             });
         });
