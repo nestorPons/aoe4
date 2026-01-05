@@ -4,70 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recolección de Alimentos - Japoneses AOE4</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #1a1a1a;
-            color: #ffffff;
-        }
-        h1 {
-            text-align: center;
-            color: #ffcc00;
-            margin-bottom: 30px;
-        }
-        .table-container {
-            overflow-x: auto;
-            margin: 20px 0;
-        }
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            max-width: 1400px;
-            margin: 0 auto;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-        }
-        th, td {
-            padding: 12px;
-            text-align: center;
-            border: 1px solid #444;
-            font-size: 14px;
-        }
-        th {
-            background-color: #2c2c2c;
-            font-weight: bold;
-            color: #ffcc00;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-        td:first-child {
-            background-color: #2c2c2c;
-            font-weight: bold;
-            text-align: left;
-            color: #ffcc00;
-        }
-        .notes {
-            max-width: 1400px;
-            margin: 30px auto;
-            padding: 20px;
-            background-color: #2c2c2c;
-            border-radius: 8px;
-            border-left: 4px solid #ffcc00;
-        }
-        .notes h3 {
-            color: #ffcc00;
-            margin-top: 0;
-        }
-        .notes ul {
-            line-height: 1.8;
-        }
-        .notes strong {
-            color: #ffcc00;
-        }
-    </style>
+    <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
-<body>
+<body class="civ-japanese">
     <h1>📊 Recolección de Alimentos - Japoneses AOE4</h1>
     
     <div class="table-container">
@@ -76,7 +15,7 @@
                 <tr>
                     <th>Fuente de Alimento</th>
                     <th>Base</th>
-                    <th>Técnicas de<br>Supervivencia</th>
+                    <th>Survival Techniques<br>/ Drift Nets</th>
                     <th>+ Tawara</th>
                     <th>+ Takezaiku</th>
                     <th>+ Fudasashi</th>
@@ -89,19 +28,19 @@
                 <tr>
                     <td>Ovejas</td>
                     <td>45</td>
-                    <td colspan="7" style="text-align: center;">—</td>
+                    <td colspan="7" class="cell-empty">—</td>
                 </tr>
                 <tr>
                     <td>Venado</td>
                     <td>49.6</td>
                     <td>57</td>
-                    <td colspan="6" style="text-align: center;">—</td>
+                    <td colspan="6" class="cell-empty">—</td>
                 </tr>
                 <tr>
                     <td>Jabalí</td>
                     <td>49.6</td>
                     <td>57</td>
-                    <td colspan="6" style="text-align: center;">—</td>
+                    <td colspan="6" class="cell-empty">—</td>
                 </tr>
                 <tr>
                     <td>Bayas</td>
@@ -110,25 +49,27 @@
                     <td>51.8</td>
                     <td>64.7</td>
                     <td>80.9</td>
-                    <td colspan="3" style="text-align: center;">—</td>
+                    <td colspan="3" class="cell-empty">—</td>
                 </tr>
                 <tr>
                     <td>Granjas</td>
                     <td>37.5</td>
-                    <td colspan="4" style="text-align: center;">—</td>
+                    <td colspan="4" class="cell-empty">—</td>
                     <td>45</td>
                     <td>52.5</td>
                     <td>60</td>
                 </tr>
                 <tr>
-                    <td>Peces Costeros</td>
-                    <td>60</td>
-                    <td colspan="7" style="text-align: center;">—</td>
+                    <td>Peces Costeros (barco)</td>
+                    <td>40.5</td>
+                    <td>46.6</td>
+                    <td colspan="6" class="cell-empty">—</td>
                 </tr>
                 <tr>
-                    <td>Peces Profundos</td>
-                    <td>66</td>
-                    <td colspan="7" style="text-align: center;">—</td>
+                    <td>Peces Profundos (barco)</td>
+                    <td>48</td>
+                    <td>55.2</td>
+                    <td colspan="6" class="cell-empty">—</td>
                 </tr>
             </tbody>
         </table>
@@ -155,17 +96,16 @@
             <li><strong>Técnicas de Supervivencia</strong> solo afecta a <strong>caza</strong> (venado y jabalí) con +15%</li>
             <li><strong>Tawara, Takezaiku, Fudasashi</strong> solo afectan <strong>bayas</strong>, cada uno da +25% acumulativo</li>
             <li>Los bonos del sistema <strong>Daimyo</strong> (Manor +20%, Palace +40%, Castle +60%) <strong>solo aplican a granjas</strong></li>
-            <li><strong>Ovejas y peces</strong> NO reciben ningún bono de tecnologías de comida de los japoneses</li>
+            <li><strong>Drift Nets</strong> (Era III, Muelle): +15% recolección de pesca, +20 capacidad, +10% velocidad de movimiento</li>
+            <li><strong>Ovejas</strong> NO reciben ningún bono de tecnologías de comida de los japoneses</li>
+            <li>Los valores de pesca son para <strong>barcos pesqueros</strong> (0.675 f/s costeros, 0.8 f/s profundos)</li>
         </ul>
     </div>
 
     <script>
         // Función para interpolar color entre rojo y verde
         function getColor(value, min, max) {
-            // Normalizar el valor entre 0 y 1
             const normalized = (value - min) / (max - min);
-            
-            // Interpolación de rojo a verde pasando por amarillo
             let r, g, b;
             
             if (normalized < 0.5) {
@@ -210,10 +150,7 @@
                 if (!isNaN(value)) {
                     const bgColor = getColor(value, minValue, maxValue);
                     cell.style.backgroundColor = bgColor;
-                    
-                    // Texto siempre en negro para mejor legibilidad
-                    cell.style.color = '#000000';
-                    cell.style.fontWeight = 'bold';
+                    cell.classList.add('cell-value');
                 }
             });
         });
